@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link {
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Añadir para que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.presentacion__contenido {
+    width: 100%; /* Ajustar al 100% en pantallas pequeñas */
+    max-width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presemtacion__contenido__titulo {
+    font-size: 36px;
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto {
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+}
+
+.presentacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulos {
+    font-family: var(--fuente-krona);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link {
+    width: 100%; /* Ajustar al 100% en pantallas pequeñas */
+    max-width: 378px;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Asegurar que el texto y la imagen estén alineados */
+    gap: 10px;
+    background-color: var(--color-hover);
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 2% 0% 0% 5%;
+    }
+
+    .header__menu {
+        gap: 40px;
+    }
+
+    .presentacion {
+        padding: 4% 10%;
+    }
+
+    
+    .iconos_responsive{
+        width: 10%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2% 5%;
+    }
+
+    .header__menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .presentacion {
+        padding: 4% 5%;
+        flex-direction: column-reverse; /* Colocar la imagen encima del contenido */
+        align-items: center;
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .presentacion__enlaces {
+        flex-direction: column;
+    }
+
+    .presentacion__enlaces__link {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .iconos_responsive{
+        width: 10%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__menu__link {
+        font-size: 20px;
+    }
+
+    .presemtacion__contenido__titulo {
+        font-size: 28px;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 18px;
+    }
+
+    .presentacion__enlaces__link {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 20px;
+    }
+
+    .iconos_responsive{
+        width: 10%;
+        max-width: 100%;
+    }
+}
